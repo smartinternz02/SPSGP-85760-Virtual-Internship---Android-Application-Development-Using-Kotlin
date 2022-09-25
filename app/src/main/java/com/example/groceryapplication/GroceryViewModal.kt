@@ -1,9 +1,7 @@
 package com.example.groceryapplication
-
 import androidx.lifecycle.ViewModel
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-
 class GroceryViewModal(private val repository: GroceryRepository) : ViewModel() {
      fun insert(items: GroceryItems) = GlobalScope.launch {
          repository.insert(items)
@@ -12,19 +10,4 @@ class GroceryViewModal(private val repository: GroceryRepository) : ViewModel() 
          repository.delete(items)
      }
     fun getAllGroceryItems() = repository.getAllItems()
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
